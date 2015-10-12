@@ -1,0 +1,12 @@
+<h1><%= @category.name %></h1>
+
+<div id="search-box">
+  Search in <%= @category.name %>
+  <%= form_tag(search_results_path, :method => 'get') do %>
+    <%= text_field_tag :search, params[:search] %>
+    <%= hidden_field_tag :category, @category.id %>
+    <button type="submit" type="button">Search</button>
+  <% end %>
+</div>
+
+<%= link_to 'delete', {action: :destroy}, method: :delete, data: {confirm: "Are you sure?"} %>

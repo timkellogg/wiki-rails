@@ -1,0 +1,13 @@
+<h1>Results</h1>
+
+<p>
+  Your search returned <%= @businesses.count %> results
+</p>
+
+<ul>
+  <% @businesses.each do |business| %>
+    <%= link_to business_path(business) do %>
+      <li><%= business.name %></li>
+    <% end %>
+  <% end %>
+</ul>

@@ -1,0 +1,19 @@
+<h1>Wiki</h1>
+
+
+<div id="search-box">
+  <%= form_tag(search_results_path, :method => 'get') do %>
+    <%= text_field_tag :search, params[:search] %>
+    <button type="submit" type="button">Search</button>
+  <% end %>
+</div>
+
+
+<h2>Categories</h2>
+<ul>
+  <% @categories.each do |category| %>
+    <%= link_to category_path(category) do %>
+      <li><%= category.name %></li>
+    <% end %>
+  <% end %>
+</ul>

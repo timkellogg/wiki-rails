@@ -1,0 +1,52 @@
+<%= form_for @business do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :mailing_address %>
+  <%= f.text_field :mailing_address %>
+
+  <%= f.label :mailing_city %>
+  <%= f.text_field :mailing_city %>
+
+  <%= f.label :mailing_state %>
+  <%= f.text_field :mailing_state %>
+
+  <%= f.label :mailing_zip %>
+  <%= f.text_field :mailing_zip %>
+
+  <%= f.label :street_address %>
+  <%= f.text_field :street_address %>
+
+  <%= f.label :street_city %>
+  <%= f.text_field :street_city %>
+
+  <%= f.label :street_state %>
+  <%= f.text_field :street_state %>
+
+  <%= f.label :street_zip %>
+  <%= f.text_field :street_zip %>
+
+  <%= f.label :url %>
+  <%= f.text_field :url %>
+
+  <%= f.label :phone %>
+  <%= f.phone_field :phone %>
+
+  <%= f.label :fax %>
+  <%= f.phone_field :fax %>
+
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+
+  <%= f.label :img %>
+  <%= f.text_field :img %>
+
+  <%= f.label :hours_of_operation %>
+  <%= f.text_field :hours_of_operation %>
+
+  <%= f.label :category %>
+  <%= f.collection_select :category_id, @categories, :id, :name %>
+
+  <%= f.submit %>
+<% end %>
